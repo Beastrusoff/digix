@@ -1,8 +1,24 @@
 {
   "compilerOptions": {
+    "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    }
-  }
+      "@/*": [
+        "./src/*"
+      ],
+      "@styles/*": [
+        "./src/assets/css/*"
+      ]
+    },
+  },
+  // vvv REMOVE
+  "include": [
+    "vite.config.js"
+  ],
+  // ^^^ REMOVE
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".git"
+  ]
 }

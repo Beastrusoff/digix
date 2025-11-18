@@ -5,21 +5,6 @@ import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({  
   root: '',
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '', // если нужно
-        importer: [
-          (url) => {
-            if (url.startsWith('@')) {
-              return { file: path.resolve(__dirname, 'src', url.slice(1)) }
-            }
-            return null
-          }
-        ]
-      }
-    }
-  },    
   resolve: {
      alias: {
         '@': resolve(__dirname, 'src'),
