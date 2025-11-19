@@ -1,0 +1,43 @@
+@use '@styles/vars.scss' as *;
+@use '@styles/titlemixins.scss' as *;
+.btn{
+    color: $color-black;
+    background-color: $color-main-btn;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    @include btn2;
+    transition: $transition;
+    cursor: pointer;
+    @media(min-width:$screen-xl){
+        width: auto;
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    &:hover{
+        color: $color-white;
+        background-color: $color-main-btn-hover;
+    }
+    &:active{
+        color: $color-black;
+        background-color: $color-main-btn-active;
+    }
+    &--secondary{
+        @include btn1;
+        color: $color-white;
+        background-color: $color-black;
+    }
+    &--secondary:hover{
+        color: $color-white;
+        background-color: $color-black-hover;
+
+    }
+    &--secondary:active{
+        color: $color-white;
+        background-color: $color-black-active;
+
+    }
+}

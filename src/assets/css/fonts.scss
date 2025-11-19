@@ -1,0 +1,15 @@
+@use '@styles/vars.scss' as *;
+@use '@styles/mixins.scss' as *;
+@include font-face(Golos,assets/fonts/golos-text_black,900,normal, woff woff2 );
+@include font-face(Golos,assets/fonts/golos-text_bold,700,normal, woff woff2 );
+@include font-face(Golos,assets/fonts/golos-text_demibold,600,normal, woff woff2 );
+@include font-face(Golos,assets/fonts/golos-text_medium,500,normal, woff woff2 );
+@include font-face(Golos,assets/fonts/golos-text_regular,400,normal, woff woff2 );
+@include font-face(Golos,assets/fonts/golos-text_vf,300,normal, woff woff2 );
+@include font-face(PTsans,assets/fonts/PTS75F,700,bold, ttf );
+// @include font-face(GolosUI,assets/fonts/golos-ui_bold,700,normal, woff woff2 );
+// @include font-face(GolosUI,assets/fonts/golos-ui_medium,500,normal, woff woff2 );
+// @include font-face(GolosUI,assets/fonts/golos-ui_regular,400,normal, woff woff2 );
+// @include font-face(GolosUI,assets/fonts/golos-ui_vf,300,normal, woff woff2 );
+
+@include font-face(icomoon,assets/fonts/icomoon,400,normal, eot woff ttf svg);

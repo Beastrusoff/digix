@@ -1,0 +1,17 @@
+@use '@styles/vars.scss' as *;
+@use '@styles/titlemixins.scss' as *;
+.logo{
+    display: block;
+    text-decoration: none;
+    &__text{
+        font-family: 'PTsans';
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: bold;
+        color: $color-main;
+        @media(min-width: $screen-xl){
+            font-size: 34px;
+            line-height: 40px;
+        }
+    }
+}

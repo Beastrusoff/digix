@@ -1,0 +1,98 @@
+@use '@styles/vars.scss' as *;
+@use '@styles/titlemixins.scss' as *;
+.menu{
+    padding-top: 24px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 24px;
+    &__logo{
+
+    }
+    &__container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__wrapper{
+        display: block;
+        left: 100%;
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        background-color: $color-white;
+        width: 100vw;
+        height: 100vh;
+        transition: $transition;
+        @media(min-width: $screen-lg){
+            display: block;
+            position: static;            
+             opacity: 1;
+        }
+    }
+    &__wrapper--open{
+        left: 0%;
+        opacity: 1;
+    }
+    &__ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style-type: none;
+        @media (min-width:$screen-lg) {            
+            display: flex;
+            gap: 32px;
+        }        
+    }
+    &__item{
+        text-transform: lowercase;
+    }
+    &__link{
+        color: $color-black;
+        text-decoration: none;
+        @include B2;
+    }
+    &__burger{
+        display: block;
+        width: 36px;
+        height: 36px;
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        @media(min-width: $screen-lg){
+            display: none;
+        }
+    }
+    &__burgerHR{
+        margin-top: 4px;
+        margin-bottom: 4px;
+        height: 4px;
+        box-shadow: none;
+        border:0;
+        outline:0;
+        border-radius: 20px;
+        background-color: $color-black;
+        transition: .4s;
+    }
+    &__burger--open{
+        &>hr{
+            opacity: 1;
+            transform: translateY(0px) rotate(225deg);
+        }
+        &>hr:first-child{
+            opacity: 1;
+            transform: translateY(9px) rotate(225deg);
+        }
+         &>hr:nth-child(2){
+            opacity: 1;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        &>hr:last-child{
+            opacity: 1;
+            transform: translateY(-9px) rotate(-225deg);
+        }
+    }
+}

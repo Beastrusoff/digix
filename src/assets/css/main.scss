@@ -1,0 +1,62 @@
+@use '@styles/vars.scss' as *;
+@use '@styles/mixins.scss' as *;
+:root{
+    font-size: 18px;    
+}
+body,
+html{
+    padding: 0;
+    margin: 0;
+    font-family: $font-family;    
+}
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -tap-highlight-color: transparent;
+    outline: none;
+}
+
+img{
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    @media(min-width: $screen-lg){        
+        transition: padding 0s;
+    }
+    @include scrollbars(1px,white);
+    &::-webkit-scrollbar {
+        width:  $thumbwidth;
+        
+    }
+  
+    &::-webkit-scrollbar-thumb {
+        background: $color-grey;
+    }
+  
+    &::-webkit-scrollbar-track {
+        background:#586C71;
+    }
+}
+.phoneInput[type=number]::-webkit-inner-spin-button,
+.phoneInput[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Для Firefox */
+.phoneInput[type=number] {
+  -moz-appearance: textfield;
+}
+.grabbing{
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+}

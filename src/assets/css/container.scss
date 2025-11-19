@@ -1,0 +1,25 @@
+@use '@styles/vars.scss' as *;
+.container{
+    max-width:100%;
+    margin: auto;
+    padding-left: 16px;
+    width: 100%;
+    padding-right: 16px;
+    position: relative;    
+    @media(min-width:$screen-lg){
+        max-width:100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media(min-width:$screen-xl){
+        max-width:$container-width;
+    }
+    @media(min-width:$screen-xxl ){
+        max-width:$container-width;
+    }      
+    &--nogap{
+        padding-left: 0;
+        padding-right: 0;
+    }
+   
+}

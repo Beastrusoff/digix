@@ -1,0 +1,80 @@
+@mixin H1 {
+    font-size: 96px;
+    line-height: 100px;
+    font-weight: 700;
+}
+@mixin H2 {
+    font-size: 84px;
+    line-height: 88px;
+    font-weight: 700;
+}
+@mixin H3 {
+    font-size: 60px;
+    line-height: 64px;
+    font-weight: 600;
+}
+@mixin H4 {
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 600;
+}
+@mixin T1 {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 500;
+}
+@mixin T2 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 500;
+}
+@mixin T3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+}
+@mixin T4 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+}
+@mixin B1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+}
+@mixin B2 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+}
+@mixin B3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+}
+@mixin B4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+}
+@mixin B5 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+@mixin B6 {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+@mixin btn1 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+}
+@mixin btn2 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
