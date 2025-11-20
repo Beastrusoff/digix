@@ -1,0 +1,54 @@
+@use '@styles/vars.scss' as *;
+.animationTitle{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+    &__first{
+        display: flex;
+        justify-content: start;
+    }
+    &__second{
+        display: flex;
+        justify-content: end;
+    }
+    &__second-img{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__second-img--first{
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 2;
+    }
+    &__second-img--second{
+        border-radius: 100%;
+        width: 40px;
+        margin-left: -16px;
+        height: 40px;
+        position: relative;
+        z-index: 1;
+    }
+    &__second-text{
+        color: $color-main;
+    }
+    &__changings{
+        display: none;
+    }
+    &__changings--mobile{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 4px;        
+        &>span:nth-child(2n){
+            display: flex;
+            justify-content: end;
+        }
+        &>span:nth-child(2n-1){
+            display: flex;
+            justify-content: start;
+        }
+    }
+    
+}

@@ -11,6 +11,7 @@ export default defineConfig({
         '@styles': resolve(__dirname, 'src/assets/css'),
         '@~': resolve(__dirname, 'node_modules'),
         Notification: resolve(__dirname, 'src/assets/js/notification.js'),
+        Menu: resolve(__dirname, 'src/assets/js/menu.js'),
       },
   },
   plugins: [injectHTML()],

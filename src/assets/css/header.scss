@@ -1,0 +1,33 @@
+@use '@styles/vars.scss' as *;
+@use '@styles/titlemixins.scss' as *;
+.header{
+    padding-top: 88px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 72px;
+    background-color: $color-main-pink;
+    position: relative;
+    &__h1{
+        visibility: hidden;
+        position: absolute;
+    }
+    &__title{
+        @include H3;
+        text-transform: uppercase;
+        color: $color-black;
+    }
+    &__imgCont{
+        text-align: center;
+        margin-top: 24px;
+    }
+    &__img{
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 11px;
+    }
+    &__btnCont{
+        margin-top: 54px;
+
+    }
+}
