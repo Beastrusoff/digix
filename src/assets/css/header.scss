@@ -2,11 +2,15 @@
 @use '@styles/titlemixins.scss' as *;
 .header{
     padding-top: 88px;
-    padding-left: 16px;
-    padding-right: 16px;
+    // padding-left: 16px;
+    // padding-right: 16px;
     padding-bottom: 72px;
+    
     background-color: $color-main-pink;
     position: relative;
+    @media(min-width:$screen-lg){
+        padding-top: 164px;
+    }
     &__h1{
         visibility: hidden;
         position: absolute;
@@ -15,19 +19,61 @@
         @include H3;
         text-transform: uppercase;
         color: $color-black;
+        @media(min-width:$screen-lg){
+            @include H1;
+        }
+    }
+    &__footer{
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: 1fr;
+        @media(min-width:$screen-lg){
+            grid-template-columns: 340px auto 1fr;
+            grid-template-areas: 'd i n' 'd b n';
+            column-gap: 94px;
+        }
+    }
+    &__desc{
+        @include B2;
+        display: none;
+        @media(min-width:$screen-lg){
+            display: flex;
+            flex-direction: column;
+            grid-area: d;
+            padding-bottom: 64px;
+        }
+    }
+    &__descText{
+        margin: 0;
+        margin-top: auto;
+        display: inline-block;
     }
     &__imgCont{
-        text-align: center;
-        margin-top: 24px;
+        text-align: left;
+        @media(min-width:$screen-lg){
+            grid-area: i;
+        }
     }
     &__img{
         max-width: 100%;
         width: auto;
         height: auto;
         border-radius: 11px;
+        @media(min-width:$screen-md){
+            max-width: 343px;
+        }
+        @media(min-width:$screen-lg){
+            max-width: 304px;
+        }
     }
     &__btnCont{
         margin-top: 54px;
-
+        @media(min-width:$screen-lg){
+            display: flex;
+            margin-top: 36px;
+            align-items: center;
+            justify-content: center;
+            grid-area: b;
+        }
     }
 }

@@ -12,8 +12,9 @@
     @include btn2;
     transition: $transition;
     cursor: pointer;
-    @media(min-width:$screen-xl){
+    @media(min-width:$screen-lg){
         width: auto;
+        display: inline-block;
         padding-left: 36px;
         padding-right: 36px;
     }

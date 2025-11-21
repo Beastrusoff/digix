@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 4px;
+    @media(min-width:$screen-lg){
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
     &__first{
         display: flex;
         justify-content: start;
@@ -10,26 +14,39 @@
     &__second{
         display: flex;
         justify-content: end;
+         @media(min-width:$screen-lg){
+            
+         }
     }
-    &__second-img{
+    &__second-imgCont{
         position: relative;
         display: flex;
         align-items: center;
     }
-    &__second-img--first{
+    &__second-img{
         border-radius: 100%;
         width: 40px;
-        height: 40px;
-        position: relative;
-        z-index: 2;
-    }
-    &__second-img--second{
-        border-radius: 100%;
-        width: 40px;
-        margin-left: -16px;
         height: 40px;
         position: relative;
         z-index: 1;
+        @media(min-width:$screen-lg){
+            width: 64px;
+            height: 64px;
+         }
+    }
+    &__second-img--first{       
+        z-index: 2;
+         @media(min-width:$screen-lg){
+            width: 61px;
+            height: 61px;
+         }
+    }
+    &__second-img--second{
+        z-index: 1;
+         margin-left: -16px;
+         @media(min-width:$screen-lg){
+            margin-left: -28px;
+         }
     }
     &__second-text{
         color: $color-main;
