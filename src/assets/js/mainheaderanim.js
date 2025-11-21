@@ -5,10 +5,10 @@ class Mainheaderanim{
             elSel: 'svg.animationTitle__svg',
             bodySel: 'body',         
             repeat:-1, // бесконечный повтор
-            repeatDelay:5000, // задержка между повторениями в миллисекундах
+            repeatDelay:2000, // задержка между повторениями в миллисекундах
             loop:true,
-            partsPause:2.5, // в миллисекундах
-            duration:12000 // длительность анимации в миллисекундах   
+            partsPause:22.5, // в миллисекундах
+            duration:13000 // длительность анимации в миллисекундах   
         }
         Object.assign(this.config,config);        
         this.init();

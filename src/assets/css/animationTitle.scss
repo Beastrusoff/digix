@@ -41,6 +41,9 @@
             height: 61px;
          }
     }
+    &__svg{
+        overflow: hidden;
+    }
     &__second-img--second{
         z-index: 1;
          margin-left: -16px;
