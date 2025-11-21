@@ -53,11 +53,28 @@
     }
     &__changings{
         display: none;
+        @media(min-width:$screen-lg){
+            display: grid;
+            grid-column: 2 span;
+            justify-content: center;
+        }
+    }
+    &__changingsSpan{
+        & path{
+            // box-shadow: 0 0 0 1px $color-black;
+            stroke-width: 1px;
+        }
+    }
+    &__changingsSpan--second{
+        display: none;
     }
     &__changings--mobile{
         display: grid;
         grid-template-columns: 1fr;
-        row-gap: 4px;        
+        row-gap: 4px;       
+        @media(min-width:$screen-lg){
+            display: none;
+        } 
         &>span:nth-child(2n){
             display: flex;
             justify-content: end;
