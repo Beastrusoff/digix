@@ -40,6 +40,18 @@ body{
         background:#586C71;
     }
 }
+.d-desktop{
+    display: none;
+    @media(min-width:$screen-lg){       
+        display: block;
+    }
+}
+.d-mobile{
+    display: block;
+    @media(min-width:$screen-lg){
+        display: none;
+    }
+}
 .phoneInput[type=number]::-webkit-inner-spin-button,
 .phoneInput[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;

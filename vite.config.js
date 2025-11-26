@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
      alias: {
         '@': resolve(__dirname, 'src'),
+        '@svg': resolve(__dirname, 'src/assets/svg'),
         '@styles': resolve(__dirname, 'src/assets/css'),
         '@~': resolve(__dirname, 'node_modules'),
         Notification: resolve(__dirname, 'src/assets/js/notification.js'),

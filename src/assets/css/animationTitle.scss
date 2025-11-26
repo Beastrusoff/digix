@@ -63,6 +63,9 @@
         }
     }
     &__changingsSpan{
+        & svg {
+            overflow: visible;
+        }
         & path{
             // box-shadow: 0 0 0 1px $color-black;
             stroke-width: 1px;

@@ -10,8 +10,7 @@ class Menu{
             menuMobileOpenedClass: 'menu__burger--open',
             wrapperOpenedClass: 'menu__wrapper--open',
         }
-        Object.assign(this.config,config);
-        console.log(this.config);
+        Object.assign(this.config,config);        
         this.init();
     }
     init(){
