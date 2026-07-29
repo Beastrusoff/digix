@@ -14,17 +14,17 @@
         padding-top: 52px;
         margin-top: -52px;
     }
-    &__h2{
-        @include T3;
-        margin: 0;
-        padding-left: $padding;
-        padding-right: $padding;
-        @media(min-width: $screen-lg){
-            @include H4;
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
+    // &__h2{
+    //     @include T3;
+    //     margin: 0;
+    //     padding-left: $padding;
+    //     padding-right: $padding;
+    //     @media(min-width: $screen-lg){
+    //         @include H4;
+    //         padding-left: 0;
+    //         padding-right: 0;
+    //     }
+    // }
     &__wrapper{
         margin-top: 32px;
         display: grid;

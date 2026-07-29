@@ -46,17 +46,17 @@ class Highlight{
         this.scrollParts();
     }
     scrollParts(){
-        clearTimeout(this.timerleft);
-        clearTimeout(this.timerright);
-        this.timerleft =  setTimeout(()=>{
+        // clearTimeout(this.timerleft);
+        // clearTimeout(this.timerright);
+        // this.timerleft =  setTimeout(()=>{
 
-            this.scrollPart(this.left);
-        },1);
-         this.scrollPart(this.right);
-        this.timerright = setTimeout(()=>{
+        //     this.scrollPart(this.left);
+        // },1);
+        //  this.scrollPart(this.right);
+        // this.timerright = setTimeout(()=>{
 
-            // this.scrollPart(this.right);
-        },1);
+        //     // this.scrollPart(this.right);
+        // },1);
 
         
     }
@@ -70,17 +70,18 @@ class Highlight{
         if(elOffset<padd) elOffset = padd;
         if(elOffset>parrect.height - rect.height - padd) elOffset = parrect.height - rect.height - padd;
         console.log(parrect.bottom + fo , rect.bottom + elOffset + fo);
-        el.style.top = `${elOffset}px`;
+        // el.style.top = `${elOffset}px`;
     }
     lightItems(){
-        let padd = 150;
+        let padd = 44;
         const windowHeight = window.innerHeight; 
         [...this.items].forEach((item,i)=>{
             if (i==0) return
             const rect = item.getBoundingClientRect();
             
-
-            if(rect.top<0||windowHeight>rect.top + rect.height + padd){
+            
+            if(rect.top<0||windowHeight/2>rect.top + rect.height/2 - padd){
+                console.log(windowHeight,rect)
                 item.classList.add(this.config.highLightClass);       
             }else{
                 item.classList.remove(this.config.highLightClass);       

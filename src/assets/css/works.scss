@@ -28,21 +28,7 @@
             padding-right: 0;
         }
     }
-    &__left{
-        @include B4;
-        color:white;
-        mix-blend-mode: difference;
-        @media(min-width:$screen-lg){
-            @include T4;
-            position: absolute;
-            top:0;
-            transition:$transition;
-            // transform: translateY(-50%);
-            left: 32px;
-            width: 172px;
-        }
-
-    }
+   
     &__center{
         font-family: 'Golos';
         font-size: 36px;
@@ -57,24 +43,51 @@
         }
     }
     &__item{
-        color:$color-black;        
+        color:$color-white;        
+        opacity: .1;
     }
     &__item--active{
-        color:white;
+        opacity: 1
     }
+    &__right-collumn,
+    &__left-collumn{
+        @media(min-width:$screen-lg){
+            position: absolute;
+            left: 32px;
+            top: 0;
+            padding-top: 133px;
+            height: 100%;
+            width: 172px;
+            padding-bottom: 133px;
+        }
+    }
+    &__right-collumn{
+        @media(min-width:$screen-lg){
+            left: unset;
+            right: 32px;            
+        }
+    }
+    &__left,
     &__right{
         @include B4;  
         color:white;
         mix-blend-mode: difference;
         @media(min-width:$screen-lg){
             @include T4;
-            position: absolute;
-            top:0;
+            position: sticky;
+            top:50%;
             transition:$transition;
-            // transform: translateY(-50%);
-            right: 32px;
+            // transform: translateY(-50%);            
             text-align: right;
             width: 172px;
+        }
+
+    }
+     &__left{
+        
+        @media(min-width:$screen-lg){        
+       
+            text-align: left;
         }
 
     }

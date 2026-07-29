@@ -1,0 +1,14 @@
+@use '@styles/vars' as *;
+@use '@styles/titlemixins' as *;
+.title{     
+    @include T3;
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: $padding;
+    padding-right: $padding;
+    @media(min-width: $screen-lg){
+        @include H4;
+        padding-left: 0;
+        padding-right: 0;
+    }    
+}
