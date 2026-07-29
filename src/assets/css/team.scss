@@ -1,0 +1,130 @@
+@use '@styles/vars' as *;
+@use '@styles/titlemixins' as *;
+.team{
+    margin-top: 112px;
+    @media(min-width:$screen-lg){
+        margin-top: 184px;
+    }
+    &__items{
+        display: grid;
+        gap: 12px;
+        margin-top: 12px;
+        @media(min-width:$screen-lg){
+            gap: 32px;
+            margin-top: 32px;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    &__item{
+
+    }
+    &__item:nth-child(1){
+        @media (min-width:$screen-lg) {
+            grid-column: 1;
+        }
+    }
+    &__item:nth-child(2){
+        @media (min-width:$screen-lg) {
+            grid-column: 2;
+        }
+    }
+    &__item:nth-child(3){
+        @media (min-width:$screen-lg) {
+            grid-column: 2;
+        }
+    }
+    &__item:nth-child(4){
+        @media (min-width:$screen-lg) {
+            grid-column: 3;
+        }
+    }
+    &__item:nth-child(5){
+        @media (min-width:$screen-lg) {
+            grid-column: 1;
+        }
+    }
+    &__item:nth-child(6){
+        @media (min-width:$screen-lg) {
+            grid-column: 3;
+        }
+    }
+    &__item:nth-child(7){
+        @media (min-width:$screen-lg) {
+            grid-column: 1;
+        }
+    }
+    &__item:nth-child(8){
+        @media (min-width:$screen-lg) {
+            grid-column: 2;
+        }
+    }
+    &__image{
+        position: relative;
+    }
+    &__img{
+        border-radius: 20px;
+        height: auto;
+        width: 100%;
+        max-width: 100%;        
+    }
+    &__hired{
+        position: absolute;
+        z-index: 1;
+        padding: 6px 12px;
+        background-color: $color-main;
+        color: $color-white;
+        border-radius: 16px;
+        @include B5;
+        bottom: 12px;
+        right: 16px;
+        @media (min-width:$screen-lg) {
+            padding: 8px 16px;
+            @include B4;
+            bottom: 16px;
+        }
+    }
+    &__fio{
+        text-transform: uppercase;
+        @include btn1;
+        color:$color-black;
+        margin-top: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+        @media(min-width:$screen-lg){
+            @include T3;
+            margin-top: 16px;
+            padding: 0;
+        }
+    }
+    &__spec{
+        color: $color-main;
+        @include B4;
+        margin-top: 2px;
+        padding-left: 16px;
+        padding-right: 16px;
+        @media(min-width:$screen-lg){
+            @include B2;  
+            padding: 0;          
+        }
+    }
+    &__link{
+        text-decoration: none;
+        display: grid;
+        color: $color-main;
+        gap: 11px;
+        padding-left: 16px;
+        margin-top: 10px;   
+        align-items: center;
+        align-content: center;
+        grid-template-columns: auto 24px 1fr;
+        @media(min-width:$screen-lg){
+            gap: 8px;
+            padding: 0;
+            margin-top: 18px;
+        }
+    }
+    &__link-text{
+        display: inline;
+        width: auto;
+    }
+}
