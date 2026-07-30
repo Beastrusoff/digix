@@ -1,0 +1,100 @@
+@use '@styles/vars' as *;
+@use '@styles/titlemixins' as *;
+.footer{
+    background-color: $color-black;
+    border-radius: 48px 48px 0 0 ;
+    color: $color-white;
+    margin-top: 124px;
+    padding-top: 40px;
+    padding-bottom: 74px;
+    &__container{
+
+    }
+    &__title{
+        text-transform: uppercase;
+        @include T3;
+        @media(min-width:$screen-lg){
+            @include H3;
+        }
+    }
+    &__title--link{
+        text-decoration: none;
+        color: $color-main;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 12px;
+        @media(min-width:$screen-lg){
+            gap: 16px;
+        }        
+    }
+    &__link-img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 100%;
+    }
+    &__form{
+        margin-top: 20px;
+        @media(min-width:$screen-lg){
+            margin-top: 42px;
+            max-width: 747px;
+        }
+    }
+    &__logo{
+        margin-top: 80px;
+        @media(min-width:$screen-lg){
+            margin-top: 48px;
+        }
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: start;
+        grid-auto-flow: dense;
+        align-content: start;   
+        row-gap: 12px;     
+        margin-top: 12px;        
+        @media(min-width:$screen-lg){
+            justify-content: start;
+            column-gap: 60px;
+            margin-top: 24px;
+            grid-template-columns: repeat(3,auto);
+        
+        }
+    }
+    &__item{
+        grid-column: 1;
+        @media(min-width:$screen-lg){
+           grid-column: auto;    
+        }
+    }
+    &__item--contacts{
+        grid-column: 2;
+        @media(min-width:$screen-lg){
+            grid-column: 1;        
+        }
+    }
+    &__link{
+        color: $color-white;
+        @include B3;
+        text-decoration: none;
+        @media(min-width:$screen-lg){
+            @include B2;        
+        }
+    }
+    &__link--ico{
+        display: grid;
+        grid-template-columns: 24px auto;
+        gap: 8px;   
+        align-content: center;
+        align-items: center;
+    }
+    &__link--ico i{
+        color: $color-black;
+    }
+}

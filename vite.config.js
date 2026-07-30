@@ -24,7 +24,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
       //   // Uncomment if you need to specify entry points for .html files
-        index:  'index.html',        
+        index:  'index.html',
+        service:  'service.html',
+        design:  'design.html',
       //   thoughts: resolve(__dirname, 'src/thoughts.html'),
       //   about: resolve(__dirname, 'src/about.html'),
       //   contact: resolve(__dirname, 'src/contact.html'),

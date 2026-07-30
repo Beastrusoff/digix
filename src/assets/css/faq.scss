@@ -1,0 +1,86 @@
+@use '@styles/vars' as *;
+@use '@styles/titlemixins' as *;
+.faq{
+    margin-top: 112px;     
+    @media (min-width:$screen-lg) {
+        margin-top: 144px;
+    } 
+    &__items{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 12px; 
+        margin-top: 12px;
+        @media (min-width:$screen-lg) {
+            row-gap: 40px; 
+            margin-top: 32px;
+        } 
+    }
+    &__item{
+        padding: 12px 0;  
+        cursor: pointer;      
+        border-bottom: 1px solid $color-black;
+        display: grid;
+        grid-template-columns: 1fr 32px;
+        grid-template-areas: 'q b' 'a b';
+        column-gap: 8px;
+        align-items: start;
+        align-content: start;
+        @media (min-width:$screen-lg) {   
+                padding:  30px 0 18px ;           
+        } 
+    }
+    &__item.open{
+        @media (min-width:$screen-lg) {   
+                 padding:  30px 0 ;           
+        } 
+    }
+    &__question{
+        grid-area: q;
+    }
+    &__question-text{
+        color: inherit;        
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 16px;        
+        line-height: 20px;      
+        vertical-align: middle;
+        transition: $transition;
+        @media (min-width:$screen-lg) {
+            @include T3; 
+        } 
+    }
+   
+    &__question-btn{
+        position: relative;    
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;            
+        cursor: pointer;
+        grid-area: b;
+    }
+    &__question-btn i{
+        transform: rotate(0deg);
+        transition: $transition;
+    }
+    &__question-btn.open i{
+        transform: rotate(90deg);
+    }
+     &__question.open{
+        color:$color-main;
+    }
+    &__answer{        
+        color: $color-grey;        
+        grid-area: a;
+    }
+    &__answer-text{
+        padding-top: 12px;
+        @include B4;
+        @media (min-width:$screen-lg) {
+            padding-top: 12px;
+            max-width: 700px;
+            @include B2;
+        }
+    }
+}
